@@ -20,17 +20,11 @@ const collectEmployees = function() {
     }
 
     employeeGroup.push(employeeInformation);
-
-  //   console.log("proof that the info was pushed "+employeeInformation[currentEmployeeNum].firstName+
-  //  " " +employeeInformation[currentEmployeeNum].lastName+" "+employeeInformation[currentEmployeeNum].employeeSalary);
-    // continueAdding=false;
-   
     currentEmployeeNum++;
-   continueAdding=confirm("Add another employee?")
+    continueAdding=confirm("Add another employee?")
 
 
   }
-  console.log(employeeGroup);
 
    return employeeGroup;
  
@@ -40,11 +34,26 @@ const collectEmployees = function() {
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
   // TODO: Calculate and display the average salary
+  
+  let totalSalary=0;
+  let avgSalary=0;
+  
+
+  for (let index = 0; index < employeeGroup.length; index++) {
+    let element=0;
+    element = parseInt(employeesArray[index].salary);
+    totalSalary +=element;
+  }
+  avgSalary= totalSalary / employeesArray.length;
+  console.log(`The average salary is ${avgSalary}`);
+
 }
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
+  
+  
 }
 
 /*
