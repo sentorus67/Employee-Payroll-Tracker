@@ -3,11 +3,6 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
 let employeeGroup= [];
 
-let employeeInformation={
-  employeeFName: "",
-  employeeLname: "",
-  employeeSalary: 0
-}
 
 // Collect employee data
 const collectEmployees = function() {
@@ -17,20 +12,29 @@ const collectEmployees = function() {
 
   while(continueAdding)
   {
-  
-  employeeInformation.employeeFName=prompt("Enter the employees first name: ");
-  employeeInformation.employeeLName=prompt("Enter the employees last name: ");
-  employeeInformation.employeeSalary=prompt("Enter the employees salary: ");
-  employeeGroup.push(employeeInformation);
-  console.log("proof that the info was pushed "+employeeGroup[currentEmployeeNum].employeeFName+
-  " " +employeeGroup[currentEmployeeNum].employeeLName+" "+employeeGroup[currentEmployeeNum].employeeSalary);
-  currentEmployeeNum++;
-  continueAdding=confirm("Add another employee?")
+
+    let employeeInformation={
+      firstName: prompt("Enter the employees first name: "),
+      lastName: prompt("Enter the employees last name: "),
+      salary: prompt("Enter the employees salary: ")
+    }
+
+    employeeGroup.push(employeeInformation);
+
+  //   console.log("proof that the info was pushed "+employeeInformation[currentEmployeeNum].firstName+
+  //  " " +employeeInformation[currentEmployeeNum].lastName+" "+employeeInformation[currentEmployeeNum].employeeSalary);
+    // continueAdding=false;
+   
+    currentEmployeeNum++;
+   continueAdding=confirm("Add another employee?")
+
+
   }
+  console.log(employeeGroup);
 
-
+   return employeeGroup;
+ 
 }
-
 
 
 // Display the average salary
