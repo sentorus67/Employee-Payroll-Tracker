@@ -13,3 +13,5 @@ WHEN I choose to cancel
 THEN my employee data is displayed on the page sorted alphabetically by last name, and the console shows computed and aggregated data
 
 <!-- the purpose of this project is to demonstrate the capabilities of javascript in a webpage. the webpage shows usage of script, including for loops. Object identifying, calling variables based on scope, and using functions that reduce the size of necessary code. The webpage allows for inputs of various information, from which it creates an object that further reveals information based on the type of variable included. -->![Payroll-Screenshot](https://github.com/sentorus67/Employee-Payroll-Tracker/assets/62941394/c05bc1d2-e226-43cf-9132-15271865ff58)
+
+https://sentorus67.github.io/Employee-Payroll-Tracker/ 
